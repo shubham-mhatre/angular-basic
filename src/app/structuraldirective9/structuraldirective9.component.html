@@ -1,0 +1,67 @@
+<p>structuraldirective9 works!</p>
+
+<!--structural directives are directives which let us add & remove
+html elements from DOM. there are 3 common structural directives
+ngIf, ngSwitch, ngFor-->
+
+<!--ngIf-->
+<h2>######### ngIf ########## </h2>
+<h2 *ngIf="false">hello ngIf</h2>
+<!--when we set ngIf to false, it will removed h2 element from dom.
+it is different from setting style as display:none
+by display:none, we are able to see element in dom as display none
+but ngIf false will remove element from dom-->
+
+<!--using true/false from property-->
+<h2 *ngIf="displayName">from property</h2>
+
+<!--using if else  -->
+<!--ng-template is angular directive that can help to wrap html code, so that we can 
+use it to wrap our else block content -->
+<h2 *ngIf="displayNameIfElse; else elseBlock">if block : property is true</h2>
+
+<ng-template #elseBlock>
+    <h2>else block : property is false</h2>
+</ng-template>
+
+<!--alternative syntax for if else block-->
+
+<div *ngIf="displayNameIfElseAlternative; then thenBlockAlt; else elseBlockAlt"></div>
+<ng-template #thenBlockAlt>
+    <h2>Name is visible</h2>
+</ng-template>
+
+<ng-template #elseBlockAlt>
+    <h2>Name is hidden</h2>
+</ng-template>
+
+<!--ngIf ends here-->
+
+<!--ngSwitch directive-->
+<h2>######### ngSwitch ########## </h2>
+<div [ngSwitch]="switchColor">
+    <h2 *ngSwitchCase="'red'">You have picked red color</h2>
+    <h2 *ngSwitchCase="'blue'">You have picked blue color</h2>
+    <h2 *ngSwitchCase="'green'">You have picked green color</h2>
+    <h2 *ngSwitchDefault>Pick again</h2>
+</div>
+
+<!--ngSwitch directive ends here-->
+
+<!--ngFor directive-->
+<h2>######### ngFor ########## </h2>
+<div *ngFor="let color of forColors">
+    <p>{{color}}</p>
+</div>
+
+<h2>ngFor directive with index</h2>
+<div *ngFor="let color of forColors; index as i">
+    <p>{{i}} {{color}}</p>
+</div>
+
+<h2>ngFor directive with first/last/odd/even</h2>
+<div *ngFor="let color of forColors; last as i">
+    <p>{{i}} {{color}}</p>
+</div>
+
+<!--ngFor directive ends here-->

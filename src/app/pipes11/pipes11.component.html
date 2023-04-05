@@ -1,0 +1,37 @@
+<p>pipes11 works!</p>
+
+<!--pipes allow us to transform data before displaying it to view-->
+<!--it tranform data only for view, does not change format for property in class-->
+
+<!--pipes for string datatype-->
+
+<p>lowercase pipe : {{name | lowercase}}</p> <!--lowercase pipe-->
+
+<p>uppercase pipe: {{name | uppercase}}</p> <!--uppercase pipe-->
+
+<p>titlecase pipe: {{message | titlecase}}</p> <!--each words first letter cap-->
+
+<p>slice pipe: {{message | slice:7:15}}</p> <!--slice, like substring, (start,end index)-->
+
+<p>json pipe: {{person | json}}</p>
+
+<!--pipes for string datatype end-->
+
+<!--pipes for number -->
+
+<p>number format : {{5.678 | number:'1.2-3'}}</p>
+<p>number format : {{5.678 | number:'3.4-5'}}</p>
+<p>number format : {{5.678 | number:'3.1-2'}}</p>
+
+<p>percent : {{0.25 | percent}}</p>
+
+<p>currency symbol : {{0.25 | currency:'INR'}}</p>
+
+<p>currency code : {{0.25 | currency:'INR':'code'}}</p>
+
+<!--pipes for date -->
+
+<p>date : {{date}}</p>
+<p>shor date : {{date | date:'short'}}</p>
+<p>shor date : {{date | date:'shortDate'}}</p>
+<p>shor date time : {{date | date:'shortTime'}}</p>

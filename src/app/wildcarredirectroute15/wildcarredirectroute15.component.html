@@ -1,0 +1,9 @@
+<p>Page Not Found !</p>
+
+<!--go to app-routing.module.ts
+here we have handle error url using wildcard routes.
+wildcard routes : {path:'**',component:Wildcarredirectroute15Component}
+but after implementing wildcard route, base url also display page not found 
+wildcard component. so we need to handle it for base url.
+{path:'',redirectTo:'/departments',pathMatch:"full"},//redirecting route
+so for base url '' we are redirecting to /departments url-->

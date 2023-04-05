@@ -1,0 +1,21 @@
+<!--interpolation to bind data from class to view-->
+
+<p>interpolation2 works! username from class using interpolation : {{name}}</p>
+<p>interpolation calculation : 2 + 2 = {{2+2}}</p>
+<p>interpolation string concate : {{"welcome " + name}}</p>
+<p>interpolation js methods length of name : {{name.length}}</p>
+<p>interpolation js methods uppercase of name : {{name.toUpperCase()}}</p>
+<p>interpolation method calls : {{greetUser()}}</p>
+<p> interpolation site url : {{siteUrl}} </p>
+
+
+
+<!-- Things we cannot do with interpolation
+    1. assignment operations cannot do with interpolation
+    <p>{{a=2+2}}</p> <Error : Bindings cannot contain assignments at column 3> 
+    
+    2. accessing global variable such as window screen etc.
+    template is not aware of global js variables.
+    <p>{{window.location.href}}</p> <error : Property 'window' does not exist on type>
+
+-->

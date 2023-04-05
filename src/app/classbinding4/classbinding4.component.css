@@ -1,0 +1,11 @@
+.text-danger{
+    color: red;
+}
+
+.text-success{
+    color: #008000;
+}
+
+.text-italic {
+    font-style: italic;
+}

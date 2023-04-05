@@ -1,0 +1,16 @@
+<p>classbinding4 works!</p>
+<p class="text-success">traditional css class</p><!--traditional way-->
+<p [class]="successClass">css class with class binding</p><!--class binding-->
+
+<!--class binding & traditional class together-->
+<p class="text-italic" [class]="successClass">shubham</p>
+
+<!--conditionally apply class based on property of ts file-->
+<!--hasError key from ts file true/false based on that disable css-->
+<!--this works fine when we have to apply one class conditionally-->
+<p [class.text-danger]="hasError">shubham</p>
+
+<!--for multiple classess conditionally, angular provides with ng class directive-->
+<!--directive is nothing but custom html attribute that angular provides -->
+
+<p [ngClass]="messageClass">shubham</p>

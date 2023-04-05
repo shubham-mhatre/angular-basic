@@ -1,0 +1,11 @@
+<p>httpfetchobservable13 works!</p>
+
+<div *ngIf="errorMsg; else elseBlock " >
+    <h2>{{errorMsg}}</h2>
+</div>    
+
+<ng-template #elseBlock>
+<div *ngFor="let emp of employee">
+    <p>{{emp.id}} {{emp.name}} {{emp.age}}</p>
+</div>
+</ng-template>

@@ -1,0 +1,15 @@
+<p>twowaydatabind8 works!</p>
+
+<!--when we work with form input, it is essential that our model & view 
+are always in sync otherwise data might not be consistence
+let say we have login form with username & password. when user update those
+fields values, our model/ or property should automatically received those values
+similary if there is update in property value then our view should
+received those values.
+we can write our own code by using propery binding & event binding
+but angular provide us with feature of two way binding : it allows us to update values of
+properties & also update same in view.
+for two way binding, angular provide us ngModel directive-->
+
+<input [(ngModel)]="name" type="text"/>
+<p>{{name}}</p>

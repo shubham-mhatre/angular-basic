@@ -1,0 +1,31 @@
+<p>service12 works!</p>
+
+<!--service is class with specific purpose.
+why do you need services:
+1.share data
+2.implement applicaiton logic
+3.external interaction such as connecting to database
+angular service naming convention is .service.ts-->
+
+<!--Dependency inject:
+DI is a coding pattern in which class receive it's dependency from external sources
+rather than creating them itself
+angular provide DI as framework known as injector.
+injector is container of all the dependecies.
+framework will manage dependencies so devloper don't have to keep track of it-->
+
+<!--how to create service
+1.define service class
+2.register with injector
+3.declare as dependency in class who needs it-->
+
+<h2>Employee List</h2>
+<ul *ngFor="let emp of employee">
+    <li>{{emp.name}}</li>
+</ul>
+
+<h2>Employee details</h2>
+<ul *ngFor="let emp of employee">
+    <li>id : {{emp.id}} name : {{emp.name}} age : {{emp.age}}</li>
+</ul>
+

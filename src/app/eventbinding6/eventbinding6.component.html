@@ -1,0 +1,18 @@
+<p>eventbinding6 works!</p>
+
+<!--so far we have seen data flowing from class to template/html
+but there are cases when data should flow from template/html to class
+like user event-->
+
+<button (click)="clickFunction()">Greet</button>
+
+<p></p>
+
+<!--we can also send event details to class using $event-->
+<button (click)="clickWithEvent($event)">send event</button>
+<p></p>
+
+<button (click)="greetmsg='template statement msg'">template statement</button>
+
+<p>{{greetmsg}}</p>
+

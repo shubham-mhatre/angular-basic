@@ -1,0 +1,11 @@
+<p>stylebinding5 works!</p>
+
+<h2 [style.color]="'orange'">style bidning</h2> <!--style binding-->
+
+<h2 [style.color]="hasError ? 'red' : 'green' ">style bidning</h2> <!--conditionally style binding-->
+
+<h2 [style.color]="highlightColor">style bidning</h2><!--color value from property as style binding-->
+
+
+<!--ngStyle for multiple styles-->
+<h2 [ngStyle]="multipleStyle">style bidning</h2>

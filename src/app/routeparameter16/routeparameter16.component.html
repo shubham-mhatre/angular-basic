@@ -1,0 +1,19 @@
+<!--this router param 16 component added in department14 component-->
+
+<!--here is what we did.
+added path in app-routing.module.ts : {path:'department/:id',component:
+to pass paramter while navigating we used Router (@angular.core) service.
+it has navigate method, using it we can pass links paramter array.
+first param is url & send param is url paramter
+To read paramter, we make use of ActivatedRoute service in 
+routeparam-departmnet-details16 
+using activateRoutes snapshot methods mapParam method we get id 
+passed from URL-->
+
+<h3>routeparameter16  : click below to route, id passed from URL</h3>
+
+<ul class="items">
+    <li [class.selected]="isMatched(department)" (click)="onSelect(department)" *ngFor="let department of departments">
+        <span class="badge">{{department.id}}</span> {{department.name}}
+    </li>
+</ul>

@@ -1,0 +1,14 @@
+<p>propertybinding3 works!</p>
+<input  [id] ="textbox1" [disabled]="isDisabled" value="shubham" /> <!--using property binding [id]-->
+<br>
+<input id="{{textbox1}}" value="abc" /> <!--using interpolation {{textbox1}}-->
+
+<!--but interpolation can only have string values, but there may be a case 
+where we need to bind boolean values like to disable attribute, there we cannot 
+use interpolation and property binding is required. -->
+
+<br>
+<!--alternate syntax for property binding-->
+<input  bind-id ="textbox1" bind-disabled="isDisabled" value="xyz" />
+
+<input  [id] ="textbox1" [disabled]="isDisabled" value="xyz" />
